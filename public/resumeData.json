@@ -4,7 +4,10 @@
     "occupation": "Full Stack Web Developer",
     "description": "Full Stack Web Developer, currently working in Infosys",
     "image": "Naz.jpg",
-    "bio": "My name is Mrinmay, I'm a Full Stack Web Developer. Currently I'm working at Infosys.",
+    "bio_line1": "I am a Full Stack Web Developer with React.js, Redux, Express.js, Node.js, and MongoDB as my tech stack.",
+    "bio_line2": "Currently I am working in Infosys.",
+    "bio_line3": "In 2019, I successfully completed my Engineering with specialization in 'Electrical Engineering.",
+    "bio_line4":"In the leisure time I love to travel to new places and explore new culture.",
     "contactmessage": "Get in touch with me to receive further details, get coached or anything else.",
     "email": "mrinmay7875@gmail.com",
     "address": {
@@ -39,7 +42,7 @@
         "school": "Techno India, Salt Lake",
         "degree": "Bachelor's Degree, Electrical Engineering",
         "graduated": "June 2018",
-        "description": "Graduated with Distinction"
+        "description": "Graduated with Distinction with Specialization in Electrical Engineering"
       }
     ],
     "work": [
@@ -47,7 +50,7 @@
         "company": "Infosys Ltd",
         "title": "Systems Engineer",
         "years": "September 2018 - Present",
-        "description": "Working as a systems engineer"
+        "description": "Working as a System Engineer"
       }
      
     ],
