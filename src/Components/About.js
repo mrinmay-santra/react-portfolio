@@ -5,19 +5,11 @@ import { FaPaperPlane } from "react-icons/fa";
 class About extends Component {
   render() {
     if (this.props.data) {
-      // var name = this.props.data.name;
       var profilepic = "images/" + this.props.data.image;
       var bio_line1 = this.props.data.bio_line1;
       var bio_line2 = this.props.data.bio_line2;
       var bio_line3 = this.props.data.bio_line3;
       var bio_line4 = this.props.data.bio_line4;
-      // var bio_array = bio.split("/");
-      // var street = this.props.data.address.street;
-      // var city = this.props.data.address.city;
-      // var state = this.props.data.address.state;
-      // var zip = this.props.data.address.zip;
-      // var phone = this.props.data.phone;
-      // var email = this.props.data.email;
     }
 
     return (
@@ -64,10 +56,10 @@ class About extends Component {
               <div className="columns contact-btn ">
                 <p>
                   <a
+                    href="#contact"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="button smoothscroll"
-                    href="#contact"
                   >
                     Contact Me
                     <FaPaperPlane style={{ marginLeft: "10px" }} />
