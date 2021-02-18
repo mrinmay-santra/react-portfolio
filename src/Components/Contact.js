@@ -9,13 +9,6 @@ const Contact = ({ data }) => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  // console.log(data);
-
-  // const handleClick = (e) => {
-  //   e.preventDefault();
-  //   window.open(`mailto:${email}?subject=${subject}&body=${name}: ${message}`);
-  // };
-
   return (
     <section id="contact">
       <div
@@ -63,6 +56,7 @@ const Contact = ({ data }) => {
                   size="35"
                   id="contactName"
                   name="contactName"
+                  required
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>
@@ -73,11 +67,12 @@ const Contact = ({ data }) => {
                 </label>
                 <input
                   value={email}
-                  type="text"
+                  type="email"
                   defaultValue=""
                   size="35"
                   id="contactEmail"
                   name="contactEmail"
+                  required
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
@@ -91,6 +86,7 @@ const Contact = ({ data }) => {
                   size="35"
                   id="contactSubject"
                   name="contactSubject"
+                  required
                   onChange={(e) => setSubject(e.target.value)}
                 />
               </div>
@@ -102,9 +98,10 @@ const Contact = ({ data }) => {
                 <textarea
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  cols="50"
-                  rows="15"
+                  cols="30"
+                  rows="10"
                   id="contactMessage"
+                  required
                   name="contactMessage"
                 ></textarea>
               </div>
