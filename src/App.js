@@ -20,6 +20,12 @@ export default function App() {
   useEffect(function () {
     // ReactGA.initialize(TRACKING_ID);
     // ReactGA.pageview("/");
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.text = "G-XJTFJVZQV6";
+    document.body.appendChild(script);
+
     getResumeData();
   }, []);
   const [resumeData, setresumeData] = useState({});
