@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ReactGA from "react-ga";
+// import ReactGA from "react-ga";
 import $ from "jquery";
 import "./App.css";
 import Header from "./Components/Header";
@@ -14,12 +14,12 @@ import Contact from "./Components/Contact";
 //   action: "Sent message",
 // });
 
-const TRACKING_ID = "G-XJTFJVZQV6"; // YOUR_OWN_TRACKING_ID
+// const TRACKING_ID = "G-XJTFJVZQV6"; // YOUR_OWN_TRACKING_ID
 
 export default function App() {
   useEffect(function () {
-    ReactGA.initialize(TRACKING_ID);
-    ReactGA.pageview("/");
+    // ReactGA.initialize(TRACKING_ID);
+    // ReactGA.pageview("/");
     getResumeData();
   }, []);
   const [resumeData, setresumeData] = useState({});
