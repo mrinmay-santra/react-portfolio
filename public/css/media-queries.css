@@ -222,7 +222,7 @@
 
   /* scrolldown link */
   header .scrolldown {
-    display: none;
+    display: block;
   }
 
   /* About Section
