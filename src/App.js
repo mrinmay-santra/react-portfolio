@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import ReactGA from "react-ga";
 import $ from "jquery";
 import "./App.css";
 import Header from "./Components/Header";
@@ -9,23 +8,9 @@ import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
 // import Testimonials from "./Components/Testimonials";
 // import Portfolio from "./Components/Portfolio";
-// ReactGA.event({
-//   category: "User",
-//   action: "Sent message",
-// });
-
-// const TRACKING_ID = "G-XJTFJVZQV6"; // YOUR_OWN_TRACKING_ID
 
 export default function App() {
   useEffect(function () {
-    // ReactGA.initialize(TRACKING_ID);
-    // ReactGA.pageview("/");
-
-    const script = document.createElement("script");
-    script.async = true;
-    script.text = "G-XJTFJVZQV6";
-    document.body.appendChild(script);
-
     getResumeData();
   }, []);
   const [resumeData, setresumeData] = useState({});
