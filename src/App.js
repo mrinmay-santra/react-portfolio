@@ -26,7 +26,9 @@ export default function App() {
       cache: false,
       success: function (data) {
         setresumeData(data);
-        setIsLoading(false);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1000);
       },
       error: function (xhr, status, err) {
         console.log(err);
