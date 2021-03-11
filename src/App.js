@@ -6,22 +6,27 @@ import Footer from "./Components/Footer";
 import About from "./Components/About";
 import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
+import Loader from "react-loader-spinner";
+
 // import Testimonials from "./Components/Testimonials";
 // import Portfolio from "./Components/Portfolio";
 
 export default function App() {
+  const [resumeData, setresumeData] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(function () {
     getResumeData();
   }, []);
-  const [resumeData, setresumeData] = useState({});
 
   function getResumeData() {
+    setIsLoading(true);
     $.ajax({
       url: "/resumeData.json",
       dataType: "json",
       cache: false,
       success: function (data) {
         setresumeData(data);
+        setIsLoading(false);
       },
       error: function (xhr, status, err) {
         console.log(err);
@@ -30,8 +35,19 @@ export default function App() {
     });
   }
 
+  if (isLoading) {
+    return (
+      <Loader
+        style={{ marginTop: "45vh", marginLeft: "48vw" }}
+        type="ThreeDots"
+        color="#00BFFF"
+        height={100}
+        width={100}
+      />
+    );
+  }
   return (
-    <div className="App">
+    <div>
       <Header data={resumeData.main} />
       <About data={resumeData.main} />
       <Resume data={resumeData.resume} />
