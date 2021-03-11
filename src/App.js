@@ -6,14 +6,45 @@ import Footer from "./Components/Footer";
 import About from "./Components/About";
 import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
+import Loader from "react-loader-spinner";
+
 // import Testimonials from "./Components/Testimonials";
 // import Portfolio from "./Components/Portfolio";
 
 export default function App() {
+  const [resumeData, setresumeData] = useState({});
+  const [isLoading, setisLoading] = useState(true);
+
+  let pageComponent;
+
+  if (isLoading) {
+    pageComponent = (
+      <Loader
+        style={{ marginTop: "45vh", marginLeft: "48vw" }}
+        type="ThreeDots"
+        color="#00BFFF"
+        height={100}
+        width={100}
+      />
+    );
+  } else {
+    pageComponent = (
+      <div>
+        <Header data={resumeData.main} />
+        <About data={resumeData.main} />
+        <Resume data={resumeData.resume} />
+        {/* <Portfolio data={this.state.resumeData.portfolio}/> */}
+        {/* <Testimonials data={this.state.resumeData.testimonials}/> */}
+        {/* <h2 style={{ color: "white", marginLeft: "40vw" }}>Contact Me</h2> */}
+
+        <Contact data={resumeData.main} />
+        <Footer data={resumeData.main} />
+      </div>
+    );
+  }
   useEffect(function () {
     getResumeData();
   }, []);
-  const [resumeData, setresumeData] = useState({});
 
   function getResumeData() {
     $.ajax({
@@ -21,6 +52,7 @@ export default function App() {
       dataType: "json",
       cache: false,
       success: function (data) {
+        setisLoading(false);
         setresumeData(data);
       },
       error: function (xhr, status, err) {
@@ -30,17 +62,5 @@ export default function App() {
     });
   }
 
-  return (
-    <div className="App">
-      <Header data={resumeData.main} />
-      <About data={resumeData.main} />
-      <Resume data={resumeData.resume} />
-      {/* <Portfolio data={this.state.resumeData.portfolio}/> */}
-      {/* <Testimonials data={this.state.resumeData.testimonials}/> */}
-      {/* <h2 style={{ color: "white", marginLeft: "40vw" }}>Contact Me</h2> */}
-
-      <Contact data={resumeData.main} />
-      <Footer data={resumeData.main} />
-    </div>
-  );
+  return <div className="App">{pageComponent}</div>;
 }
