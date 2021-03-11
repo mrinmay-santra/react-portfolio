@@ -13,7 +13,7 @@ import Loader from "react-loader-spinner";
 
 export default function App() {
   const [resumeData, setresumeData] = useState({});
-  const [isLoading, setisLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   let pageComponent;
 
@@ -47,13 +47,16 @@ export default function App() {
   }, []);
 
   function getResumeData() {
+    setIsLoading(true);
     $.ajax({
       url: "/resumeData.json",
       dataType: "json",
       cache: false,
       success: function (data) {
-        setisLoading(false);
         setresumeData(data);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 1100);
       },
       error: function (xhr, status, err) {
         console.log(err);
