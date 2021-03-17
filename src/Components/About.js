@@ -57,7 +57,6 @@ class About extends Component {
                 <p>
                   <a
                     href="#contact"
-                    target="_blank"
                     rel="noopener noreferrer"
                     className="button smoothscroll"
                   >

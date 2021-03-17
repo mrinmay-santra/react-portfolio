@@ -7,7 +7,7 @@ import About from "./Components/About";
 import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
 import Loader from "react-loader-spinner";
-
+import Projects from "./Components/Projects";
 // import Testimonials from "./Components/Testimonials";
 // import Portfolio from "./Components/Portfolio";
 
@@ -36,7 +36,7 @@ export default function App() {
         {/* <Portfolio data={this.state.resumeData.portfolio}/> */}
         {/* <Testimonials data={this.state.resumeData.testimonials}/> */}
         {/* <h2 style={{ color: "white", marginLeft: "40vw" }}>Contact Me</h2> */}
-
+        <Projects />
         <Contact data={resumeData.main} />
         <Footer data={resumeData.main} />
       </div>
