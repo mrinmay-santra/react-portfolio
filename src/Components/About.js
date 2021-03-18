@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { FaExternalLinkAlt } from "react-icons/fa";
-import { FaPaperPlane } from "react-icons/fa";
+// import { FaExternalLinkAlt } from "react-icons/fa";
+// import { FaPaperPlane } from "react-icons/fa";
 
 class About extends Component {
   render() {
     if (this.props.data) {
-      var profilepic = "images/" + this.props.data.image;
+      // var profilepic = "images/" + this.props.data.image;
       var bio_line1 = this.props.data.bio_line1;
       var bio_line2 = this.props.data.bio_line2;
       var bio_line3 = this.props.data.bio_line3;
@@ -18,7 +18,7 @@ class About extends Component {
           <div className="three columns">
             <img
               className="profile-pic"
-              src={profilepic}
+              src="/images/profile.jpg"
               alt="Mrinmay profilepic"
             />
           </div>
@@ -48,7 +48,7 @@ class About extends Component {
                     className="button"
                   >
                     View Resume
-                    <FaExternalLinkAlt style={{ marginLeft: "6px" }} />
+                    {/* <FaExternalLinkAlt  /> */}
                   </a>
                 </p>
               </div>
@@ -61,7 +61,7 @@ class About extends Component {
                     className="button smoothscroll"
                   >
                     Contact Me
-                    <FaPaperPlane style={{ marginLeft: "10px" }} />
+                    {/* <FaPaperPlane style={{ marginLeft: "10px" }} /> */}
                   </a>
                 </p>
               </div>

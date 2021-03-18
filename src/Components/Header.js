@@ -56,6 +56,15 @@ class Header extends Component {
                 Resume
               </a>
             </li>
+            <li>
+              <a
+                style={{ fontSize: "1.5rem" }}
+                className="smoothscroll"
+                href="#project"
+              >
+                Projects
+              </a>
+            </li>
             {/* <li>
               <a className="smoothscroll" href="#portfolio">
                 Works

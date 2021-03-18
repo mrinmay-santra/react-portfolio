@@ -10,6 +10,7 @@ import Loader from "react-loader-spinner";
 import Projects from "./Components/Projects";
 // import Testimonials from "./Components/Testimonials";
 // import Portfolio from "./Components/Portfolio";
+import { ChakraProvider } from "@chakra-ui/react";
 
 export default function App() {
   const [resumeData, setresumeData] = useState({});
@@ -65,5 +66,10 @@ export default function App() {
     });
   }
 
-  return <div className="App">{pageComponent}</div>;
+  return (
+    <ChakraProvider>
+      <div className="App">{pageComponent}</div>;
+    </ChakraProvider>
+  );
+  // return <div className="App">{pageComponent}</div>;
 }
