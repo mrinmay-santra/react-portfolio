@@ -1,10 +1,13 @@
 import * as React from "react";
 import { Flex, Text } from "@chakra-ui/react";
 import ProjectItem from "./ProjectItem";
-
+import "./Projects_style.css";
 export default function Projects() {
   return (
-    <section id="project" style={{ minHeight: "100vh" }}>
+    <section
+      id="project"
+      style={{ minHeight: "100vh", backgroundColor: "#d9d9d9" }}
+    >
       {/* Section heading */}
       <div style={{ display: "flex", justifyContent: "center" }}>
         <Text
@@ -25,8 +28,10 @@ export default function Projects() {
         align="center"
         justify="space-evenly"
         flexWrap="wrap"
-        bg="#dddddd"
+        // bg="#dddddd"
         minHeight="110vh"
+        className="projects_container"
+        // style={{ backgroundColor: "green" }}
       >
         {/* Youtube channel application project */}
 

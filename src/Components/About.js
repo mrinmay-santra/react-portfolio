@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import { FaExternalLinkAlt } from "react-icons/fa";
 // import { FaPaperPlane } from "react-icons/fa";
-
+import { motion } from "framer-motion";
 class About extends Component {
   render() {
     if (this.props.data) {
@@ -15,13 +15,13 @@ class About extends Component {
     return (
       <section id="about">
         <div className="row">
-          <div className="three columns">
+          <motion.div whileTap={{ scale: 1.3 }} className="three columns">
             <img
               className="profile-pic"
               src="/images/profile.jpg"
               alt="Mrinmay profilepic"
             />
-          </div>
+          </motion.div>
           <div className="nine columns main-col">
             <h2>About Me</h2>
             <ol style={{ listStyle: "square", color: "#e7e6e1" }}>

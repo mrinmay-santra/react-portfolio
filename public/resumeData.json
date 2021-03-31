@@ -42,7 +42,7 @@
         "school": "Techno India, Salt Lake",
         "degree": "Bachelor's Degree, Electrical Engineering",
         "graduated": "June 2018",
-        "description": "Graduated with Distinction with Specialization in Electrical Engineering"
+        "description": "Graduated with Distinction with Specialization in Electrical Engineering."
       }
     ],
     "work": [
@@ -50,7 +50,7 @@
         "company": "Infosys Ltd",
         "title": "Systems Engineer",
         "years": "September 2018 - Present",
-        "description": "Working as a System Engineer"
+        "description": ""
       }
      
     ],

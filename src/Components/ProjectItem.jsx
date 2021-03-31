@@ -1,25 +1,32 @@
-import React from 'react'
-// import * as React from "react";
+// import React from 'react'
+import * as React from "react";
+import { motion } from "framer-motion";
+
 import { Box, Image, Flex, Badge, Text, Button, Icon } from "@chakra-ui/react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 function ProjectItem(props) {
   let imageHeight =props.imageHeight
   let imageWidth = props.imageWidth
     return (
-           <Box
-          p="2"
-          m="10px"
-          maxW="420px"
-          borderWidth="1px"
-          borderRadius="5px"
-          boxShadow="2xl"
-          mb="20px"
-          borderColor="black"
-          bg="white"
-//            _hover={{
-//     background: "darkgrey",
-//     color: "teal.500",
-//   }}
+      <motion.div 
+        whileHover={{ scale: 1.25 }} whileTap={{ scale: 0.8 }}
+            >
+          <Box
+           
+           p="2"
+           m="10px"
+           maxW="420px"
+           borderWidth="1px"
+           borderRadius="5px"
+           boxShadow="2xl"
+           mb="20px"
+           borderColor="black"
+           bg="white"
+  //          _hover={{
+  //   background: "darkgrey",
+  //   color: "teal.500",
+  //   transform:scale(1.4)
+  // }}
         >
           <div       
             style={{height: imageHeight,width: imageWidth}}
@@ -107,6 +114,8 @@ function ProjectItem(props) {
             </a>
           </Flex>
         </Box> 
+      </motion.div>
+
     )
 }
 

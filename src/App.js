@@ -8,7 +8,6 @@ import Resume from "./Components/Resume";
 import Contact from "./Components/Contact";
 import Loader from "react-loader-spinner";
 import Projects from "./Components/Projects";
-// import Testimonials from "./Components/Testimonials";
 // import Portfolio from "./Components/Portfolio";
 import { ChakraProvider } from "@chakra-ui/react";
 

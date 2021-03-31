@@ -102,7 +102,7 @@
 /* mobile wide/smaller tablets
 ---------------------------------------------------------------------- */
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   /* mobile navigation
    -------------------------------------------------------------------- */
   #nav-wrap {
@@ -396,9 +396,16 @@
 
   /* social links */
   footer .social-links {
-    font-size: 22px;
+    font-size: 40px;
+    /* color:black */
   }
+
+ footer .social-links :hover {
+    transform: scale(1.15);
+    transition: transform 0.7s;
+  } 
   footer .social-links li {
+    /* color:black; */
     margin-left: 18px;
   }
 
@@ -441,7 +448,7 @@
 
   /* header social links */
   header .social {
-    font-size: 20px;
+    font-size: 30px;
   }
   header .social li {
     margin: 0 6px;
@@ -452,9 +459,29 @@
 
   /* social links */
   footer .social-links {
-    font-size: 20px;
+    font-size: 40px;
+    /* color:black; */
   }
+
+   footer .social-links:hover {
+    transition: scale(1.4);
+    transition: transform 1s;
+  } 
   footer .social-links li {
     margin-left: 14px;
+    /* color:black */
   }
+}
+/* Screenwidth more than 1024px */
+@media only screen and (min-width: 1024px) {
+  footer .social-links {
+    font-size: 45px;
+    /* color:black */
+  }
+   
+  footer .social-links :hover {
+    color: black;
+    transform: scale(1.15);
+    transition: transform 0.7s;
+  } 
 }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { motion } from "framer-motion";
 class Header extends Component {
   render() {
     if (this.props.data) {
@@ -9,11 +9,15 @@ class Header extends Component {
       // var city = this.props.data.address.city;
       var networks = this.props.data.social.map(function (network) {
         return (
-          <li key={network.name}>
+          <motion.li
+            key={network.name}
+            whileHover={{ scale: 1.5 }}
+            whileTap={{ scale: 0.8 }}
+          >
             <a target="_blank" rel="noopener noreferrer" href={network.url}>
               <i style={{ fontSize: "35px" }} className={network.className}></i>
             </a>
-          </li>
+          </motion.li>
         );
       });
     }
@@ -90,20 +94,27 @@ class Header extends Component {
         <div className="row banner">
           <div className="banner-text">
             <h1 className="responsive-headline">I'm {name}.</h1>
-            <h3 style={{ fontSize: "25px" }}>
+            <h3 style={{ fontSize: "25px", color: "white" }}>
               I'm a full stack web developer currently working in MERN stack.
             </h3>
             <hr />
-            <ul className="social">{networks}</ul>
+            <ul whileHover={{ scale: 1.25 }} className="social">
+              {networks}
+            </ul>
           </div>
         </div>
 
         {/* Scroll down icon */}
 
         <p className="scrolldown">
-          <a className="smoothscroll" href="#about">
+          <motion.a
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.8 }}
+            className="smoothscroll"
+            href="#about"
+          >
             <i className="icon-down-circle"></i>
-          </a>
+          </motion.a>
         </p>
       </header>
     );

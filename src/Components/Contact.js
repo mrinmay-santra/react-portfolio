@@ -129,7 +129,7 @@ const Contact = ({ data }) => {
           </div>
         </div>
 
-        <aside className="four columns footer-widgets">
+        {/* <aside className="four columns footer-widgets">
           <div className="widget widget_contact">
             <h4>Address and Email</h4>
             <p className="address">
@@ -143,7 +143,7 @@ const Contact = ({ data }) => {
           </div>
 
           <div className="widget widget_tweets"></div>
-        </aside>
+        </aside> */}
       </div>
     </section>
   );
