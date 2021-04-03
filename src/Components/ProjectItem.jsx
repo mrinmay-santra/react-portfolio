@@ -9,7 +9,7 @@ function ProjectItem(props) {
   let imageWidth = props.imageWidth
     return (
       <motion.div 
-        whileHover={{ scale: 1.25 }} whileTap={{ scale: 0.8 }}
+        whileHover={{ scale: 1.25 }} 
             >
           <Box
            
