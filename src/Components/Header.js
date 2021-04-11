@@ -33,10 +33,10 @@ class Header extends Component {
           </a>
 
           <ul id="nav" className="nav">
-            <li className="current">
+            <li>
               <a
                 style={{ fontSize: "1.5rem" }}
-                className="smoothscroll"
+                className="smoothscroll "
                 href="#home"
               >
                 Home
@@ -45,7 +45,7 @@ class Header extends Component {
             <li>
               <a
                 style={{ fontSize: "1.5rem" }}
-                className="smoothscroll"
+                className="smoothscroll "
                 href="#about"
               >
                 About
@@ -54,7 +54,7 @@ class Header extends Component {
             <li>
               <a
                 style={{ fontSize: "1.5rem" }}
-                className="smoothscroll"
+                className="smoothscroll "
                 href="#resume"
               >
                 Resume
@@ -63,7 +63,7 @@ class Header extends Component {
             <li>
               <a
                 style={{ fontSize: "1.5rem" }}
-                className="smoothscroll"
+                className="smoothscroll "
                 href="#project"
               >
                 Projects
@@ -79,10 +79,10 @@ class Header extends Component {
                 Testimonials
               </a>
             </li> */}
-            <li>
+            <li className="nav-item">
               <a
                 style={{ fontSize: "1.5rem" }}
-                className="smoothscroll"
+                className="smoothscroll nav-item"
                 href="#contact"
               >
                 Contact

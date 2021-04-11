@@ -189,17 +189,25 @@ ul#nav li a {
   text-decoration: none;
   text-align: left;
   color: #fff;
-
+  opacity: 0.7;
   -webkit-transition: color 0.2s ease-in-out;
   -moz-transition: color 0.2s ease-in-out;
   -o-transition: color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out;
-  transition: color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+ul#nav li a:hover {
+  opacity: 1;
+  font-weight: bold;
+  background-color: transparent !important;
+  border-bottom: solid rgb(12, 189, 189) 4px;
 }
 
 ul#nav li a:active {
   background-color: transparent !important;
 }
+
 ul#nav li.current a {
   color: #f06000;
 }
@@ -1052,7 +1060,6 @@ footer .social-links {
   margin: 18px 0 30px 0;
   padding: 0;
   font-size: 30px;
- 
 }
 footer .social-links li {
   display: inline-block;
