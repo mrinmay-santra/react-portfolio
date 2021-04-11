@@ -8,25 +8,21 @@ function ProjectItem(props) {
   let imageHeight =props.imageHeight
   let imageWidth = props.imageWidth
     return (
-      <motion.div 
-        whileHover={{ scale: 1.25 }} 
-            >
+    
           <Box
-           
-           p="2"
-           m="10px"
+          className="projectItem"
+           p="6"
+           rounded="md"
            maxW="420px"
-           borderWidth="1px"
+           borderWidth="5px"
            borderRadius="5px"
-           boxShadow="2xl"
-           mb="20px"
-           borderColor="black"
+           
+           mt="20px"
            bg="white"
-  //          _hover={{
-  //   background: "darkgrey",
-  //   color: "teal.500",
-  //   transform:scale(1.4)
-  // }}
+
+          style={{boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);"}}
+           _hover={{   boxShadow: "0 19px 38px rgba(0,0,0,0.1),0 15px 12px rgba(0,0,0,0.1);" }}
+  
         >
           <div       
             style={{height: imageHeight,width: imageWidth}}
@@ -74,6 +70,7 @@ function ProjectItem(props) {
             fontSize="2xl"
             fontWeight="bold"
             lineHeight="short"
+            className="projectItem_heading"
           >
             {props.projectTitle}
           </Text>
@@ -83,6 +80,12 @@ function ProjectItem(props) {
               target="_blank"
               rel="noopener noreferrer"
             >
+              
+   <motion.div 
+        whileHover={{ scale: 1.07 }} 
+        whileTap={{ scale: 0.9 }}
+            >
+
               <Button
                 colorScheme="green"
                 fontSize="xl"
@@ -91,15 +94,23 @@ function ProjectItem(props) {
                 mr="5"
                 ml="2"
                 mb="2"
-              >
+                >
                 Source Code <Icon as={FaGithub} ml="2" w={7} h={7} />
               </Button>
+                </motion.div>
             </a>
             <a
               href={props.projectDemoLink}
               target="_blank"
               rel="noopener noreferrer"
             >
+
+   <motion.div 
+        whileHover={{ scale: 1.1,textShadow: "5px 5px 5px red" }} 
+        whileTap={{ scale: 0.9 }}
+            >
+
+
               <Button
                 colorScheme="blue"
                 fontSize="xl"
@@ -107,14 +118,14 @@ function ProjectItem(props) {
                 mr="5"
                 mb="2"
                 mt="2"
-              >
+                >
                 View Demo
                 <Icon as={FaExternalLinkAlt} ml="2" w={6} h={6} />
               </Button>
+                </motion.div>
             </a>
           </Flex>
         </Box> 
-      </motion.div>
 
     )
 }

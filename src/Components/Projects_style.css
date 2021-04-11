@@ -5,6 +5,23 @@
   background-size: cover;
 }
 
+.projectItem {
+  transition: all 0.2s ease-in-out;
+  font-family: "Roboto", sans-serif;
+}
+
+.projectItem_heading {
+  display: inline-block;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.8;
+}
+
+.projectItem_heading:hover {
+  opacity: 1;
+}
+
+
 .footer-svg {
   color: black;
   max-height: "200px";
