@@ -1,7 +1,7 @@
 // import React from 'react'
 import * as React from "react";
 import { motion } from "framer-motion";
-import Flip from 'react-reveal/Fade';
+import Flip from 'react-reveal/Flip';
 import { Box, Image, Flex, Badge, Text, Button, Icon } from "@chakra-ui/react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 function ProjectItem(props) {
@@ -9,7 +9,8 @@ function ProjectItem(props) {
   let imageWidth = props.imageWidth
     return (
             <Flip left>
-
+<motion.div whileTap={{ scale: 0.98 }}>
+  
           <Box
           className="projectItem"
            p="6"
@@ -24,7 +25,6 @@ function ProjectItem(props) {
            bg="white"
 
           style={{boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)"}}
-           _hover={{   boxShadow: "0 19px 38px rgba(0,0,0,0.1),0 15px 12px rgba(0,0,0,0.1);" }}
   
         >
           <div       
@@ -32,8 +32,7 @@ function ProjectItem(props) {
           >
 
             <Image
-            style={{ maxHeight: "100%",
-            width: "100%"}}
+            className="projectImage"
             src={props.projectImage}
             alt="project image"
             />
@@ -129,6 +128,8 @@ function ProjectItem(props) {
             </a>
           </Flex>
         </Box>
+        
+</motion.div>
          </Flip> 
 
     )
