@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { motion } from "framer-motion";
 import Slide from "react-reveal/Slide";
+import Jump from "react-reveal/Jump";
+import Pulse from "react-reveal/Pulse";
+
+import Flip from "react-reveal/Flip";
 class Header extends Component {
   render() {
     if (this.props.data) {
@@ -25,8 +29,8 @@ class Header extends Component {
 
     return (
       <header style={{ minHeight: "100vh" }} id="home">
-        <Slide top duration={1200}>
-          <nav av id="nav-wrap">
+        <Slide top delay={3000} duration={1500}>
+          <nav id="nav-wrap">
             <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
               Show navigation
             </a>
@@ -96,14 +100,24 @@ class Header extends Component {
 
         <div className="row banner">
           <div className="banner-text">
-            <h1 className="responsive-headline">I'm {name}.</h1>
-            <h3 style={{ fontSize: "25px", color: "white" }}>
-              I'm a full stack web developer currently working in MERN stack.
-            </h3>
+            <Jump duration={1000}>
+              <Pulse duration={1500} delay={4500}>
+                <h1 className="responsive-headline">I'm {name}.</h1>
+              </Pulse>
+            </Jump>
+
+            <Flip right delay={1300} duration={1300}>
+              <h3 style={{ fontSize: "25px", color: "white" }}>
+                I'm a full stack web developer currently working in MERN stack.
+              </h3>
+            </Flip>
             <hr />
-            <ul whileHover={{ scale: 1.25 }} className="social">
-              {networks}
-            </ul>
+
+            <Slide left delay={2200} duration={1300}>
+              <ul whileHover={{ scale: 1.25 }} className="social">
+                {networks}
+              </ul>
+            </Slide>
           </div>
         </div>
 
