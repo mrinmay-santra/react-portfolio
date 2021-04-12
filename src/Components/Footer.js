@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Image } from "@chakra-ui/react";
+// import { Image } from "@chakra-ui/react";
 class Footer extends Component {
   render() {
     if (this.props.data) {
@@ -30,7 +30,7 @@ class Footer extends Component {
             </a>
           </div>
         </div>
-        <svg
+        {/* <svg
           className="disappear_SVG_WAVE_in_Mobile"
           style={{
             margin: "0px",
@@ -54,14 +54,14 @@ class Footer extends Component {
             fillOpacity="0.8"
             d="M0,32L60,48C120,64,240,96,360,101.3C480,107,600,85,720,69.3C840,53,960,43,1080,48C1200,53,1320,75,1380,85.3L1440,96L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
           ></path>
-        </svg>
+        </svg> */}
 
-        <Image
+        {/* <Image
           style={{ position: "absolute", right: "100px", bottom: "-270px" }}
           boxSize="250px"
           src="/images/teacher2.svg"
           alt="teacher image for footer section"
-        />
+        /> */}
       </footer>
     );
   }
