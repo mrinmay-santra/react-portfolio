@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { motion } from "framer-motion";
+import Slide from "react-reveal/Slide";
 class Header extends Component {
   render() {
     if (this.props.data) {
@@ -24,72 +25,74 @@ class Header extends Component {
 
     return (
       <header style={{ minHeight: "100vh" }} id="home">
-        <nav id="nav-wrap">
-          <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
-            Show navigation
-          </a>
-          <a className="mobile-btn" href="#home" title="Hide navigation">
-            Hide navigation
-          </a>
+        <Slide top duration={1200}>
+          <nav av id="nav-wrap">
+            <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
+              Show navigation
+            </a>
+            <a className="mobile-btn" href="#home" title="Hide navigation">
+              Hide navigation
+            </a>
 
-          <ul id="nav" className="nav">
-            <li>
-              <a
-                style={{ fontSize: "1.5rem" }}
-                className="smoothscroll "
-                href="#home"
-              >
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                style={{ fontSize: "1.5rem" }}
-                className="smoothscroll "
-                href="#about"
-              >
-                About
-              </a>
-            </li>
-            <li>
-              <a
-                style={{ fontSize: "1.5rem" }}
-                className="smoothscroll "
-                href="#resume"
-              >
-                Resume
-              </a>
-            </li>
-            <li>
-              <a
-                style={{ fontSize: "1.5rem" }}
-                className="smoothscroll "
-                href="#project"
-              >
-                Projects
-              </a>
-            </li>
-            {/* <li>
+            <ul id="nav" className="nav">
+              <li>
+                <a
+                  style={{ fontSize: "1.5rem" }}
+                  className="smoothscroll "
+                  href="#home"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  style={{ fontSize: "1.5rem" }}
+                  className="smoothscroll "
+                  href="#about"
+                >
+                  About
+                </a>
+              </li>
+              <li>
+                <a
+                  style={{ fontSize: "1.5rem" }}
+                  className="smoothscroll "
+                  href="#resume"
+                >
+                  Resume
+                </a>
+              </li>
+              <li>
+                <a
+                  style={{ fontSize: "1.5rem" }}
+                  className="smoothscroll "
+                  href="#project"
+                >
+                  Projects
+                </a>
+              </li>
+              {/* <li>
               <a className="smoothscroll" href="#portfolio">
                 Works
               </a>
             </li> */}
-            {/* <li>
+              {/* <li>
               <a className="smoothscroll" href="#testimonials">
                 Testimonials
               </a>
             </li> */}
-            <li className="nav-item">
-              <a
-                style={{ fontSize: "1.5rem" }}
-                className="smoothscroll nav-item"
-                href="#contact"
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
-        </nav>
+              <li className="nav-item">
+                <a
+                  style={{ fontSize: "1.5rem" }}
+                  className="smoothscroll nav-item"
+                  href="#contact"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </Slide>
 
         <div className="row banner">
           <div className="banner-text">
