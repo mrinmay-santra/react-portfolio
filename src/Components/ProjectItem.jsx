@@ -1,14 +1,15 @@
 // import React from 'react'
 import * as React from "react";
 import { motion } from "framer-motion";
-
+import Flip from 'react-reveal/Fade';
 import { Box, Image, Flex, Badge, Text, Button, Icon } from "@chakra-ui/react";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 function ProjectItem(props) {
   let imageHeight =props.imageHeight
   let imageWidth = props.imageWidth
     return (
-    
+            <Flip left>
+
           <Box
           className="projectItem"
            p="6"
@@ -127,7 +128,8 @@ function ProjectItem(props) {
                 </motion.div>
             </a>
           </Flex>
-        </Box> 
+        </Box>
+         </Flip> 
 
     )
 }
