@@ -38,7 +38,7 @@ export default function Projects() {
         <ProjectItem
           projectTitle="YouTube Channel Dashboard"
           projectRepo="https://github.com/mrinmay-santra/YT_Channel_Information"
-          projectDemoLink="https://youtube-channel-info-1014680.netlify.app/"
+          projectDemoLink="https://bit.ly/3tgy8Km"
           projectImage="/images/youtube.svg"
           tech1="React.js"
           tech2="Youtube Data API"
@@ -49,7 +49,7 @@ export default function Projects() {
         <ProjectItem
           projectTitle="Realtime Chat Application"
           projectRepo="https://github.com/mrinmay-santra/JustChat-Application"
-          projectDemoLink="https://justchat-application.herokuapp.com/"
+          projectDemoLink="https://bit.ly/3g7Ylab"
           projectImage="/images/chat.svg"
           tech1="Node.js"
           tech2="Socket.io"
@@ -61,7 +61,7 @@ export default function Projects() {
         <ProjectItem
           projectTitle="TaskList Application"
           projectRepo="https://github.com/mrinmay-santra/TaskList-App"
-          projectDemoLink=" https://tasklist-app1.netlify.app/"
+          projectDemoLink="https://bit.ly/2QlDfup"
           projectImage="/images/tasklist.svg"
           tech1="HTML"
           tech2="CSS"
@@ -73,7 +73,7 @@ export default function Projects() {
         <ProjectItem
           projectTitle="Markdown Previewer"
           projectRepo="https://github.com/mrinmay-santra/markdown_previewer"
-          projectDemoLink="https://react-makrdown-previewer.netlify.app/"
+          projectDemoLink="https://bit.ly/2RnKx12"
           projectImage="/images/markdown_previewer.svg"
           tech1="React.js"
           tech2="JavaScript"
@@ -86,7 +86,7 @@ export default function Projects() {
         <ProjectItem
           projectTitle="Tic Tac Toe Game "
           projectRepo="https://github.com/mrinmay-santra/tic-tac-toe-game"
-          projectDemoLink="https://tic-tac-toe-game-using-js1.netlify.app/"
+          projectDemoLink="https://bit.ly/327sSgp"
           projectImage="/images/tictactoe.svg"
           tech1="HTML"
           tech2="CSS"
