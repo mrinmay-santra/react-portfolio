@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import { ReactComponent as ScrolldownIcon } from "./Icons/chevron-down-solid.svg";
 import { motion } from "framer-motion";
 import Slide from "react-reveal/Slide";
-import Jump from "react-reveal/Jump";
-import Pulse from "react-reveal/Pulse";
-
 import Flip from "react-reveal/Flip";
+import Fade from "react-reveal/Fade";
+import LightSpeed from "react-reveal/LightSpeed";
+import Flash from "react-reveal/Flash";
 class Header extends Component {
   render() {
     if (this.props.data) {
@@ -29,7 +30,7 @@ class Header extends Component {
 
     return (
       <header style={{ minHeight: "100vh" }} id="home">
-        <Slide top delay={3000} duration={1500}>
+        <Slide top delay={0} duration={1000}>
           <nav id="nav-wrap">
             <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
               Show navigation
@@ -100,29 +101,28 @@ class Header extends Component {
 
         <div className="row banner">
           <div className="banner-text">
-            <Jump duration={1000}>
-              <Pulse duration={1500} delay={4500}>
+            <Flip bottom duration={1000} delay={1200}>
+              <Flash duration={600} delay={4300}>
                 <h1 className="responsive-headline">I'm {name}.</h1>
-              </Pulse>
-            </Jump>
+              </Flash>
+            </Flip>
 
-            <Flip right delay={1300} duration={1300}>
+            <Fade bottom delay={2000} duration={1500}>
               <h3 style={{ fontSize: "25px", color: "white" }}>
                 I'm a full stack web developer currently working in MERN stack.
               </h3>
-            </Flip>
+            </Fade>
             <hr />
 
-            <Slide left delay={2200} duration={1300}>
+            <LightSpeed left delay={3000} duration={1300}>
               <ul whileHover={{ scale: 1.25 }} className="social">
                 {networks}
               </ul>
-            </Slide>
+            </LightSpeed>
           </div>
         </div>
 
         {/* Scroll down icon */}
-
         <p className="scrolldown">
           <motion.a
             whileHover={{ scale: 1.2 }}
@@ -130,7 +130,9 @@ class Header extends Component {
             className="smoothscroll"
             href="#about"
           >
-            <i className="icon-down-circle"></i>
+            <Flip top delay={5000} duration={800}>
+              <ScrolldownIcon />
+            </Flip>
           </motion.a>
         </p>
       </header>
