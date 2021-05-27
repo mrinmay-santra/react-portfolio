@@ -48,7 +48,7 @@ class About extends Component {
                 <div className="columns download ">
                   <p>
                     <a
-                      href="https://bit.ly/3wTJHJG"
+                      href="https://drive.google.com/file/d/1iMu9NE16yIxvtaZzNYuVAciY8o0TNpsa/view"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="button"
